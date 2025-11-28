@@ -1,0 +1,111 @@
+<div class="container mt-5 rooms-container">
+
+  <h2 class="text-center mb-4 rooms-title">Hotel Rooms</h2>
+ 
+  <div class="rooms-title-divider"></div>
+ 
+  <div class="search-bar mb-4 text-center">
+ 
+   <input type="text" class="rooms-search-input" placeholder="Search by Hotel Name" [(ngModel)]="searchTerm" (ngModelChange)="searchByHotelName()" />
+ 
+  </div>
+ 
+  <div *ngIf="filteredTerm.length === 0" class="rooms-alert alert alert-warning" role="alert">
+ 
+   No rooms found.
+ 
+  </div>
+ 
+  <div class="rooms-card-container">
+ 
+   <div *ngFor="let room of paginatedRooms; let i = index" class="rooms-card">
+ 
+    <img [src]="room.ImageUrl" alt="Room Image" class="rooms-card-image"/>
+ 
+    <div class="rooms-card-header">
+ 
+     <div class="rooms-hotel-name">{{ room.HotelName }}</div>
+ 
+     <div class="rooms-price">{{ room.PricePerNight | currency:'INR' }}</div>
+ 
+    </div>
+ 
+    <div class="rooms-card-content">
+ 
+     <div class="rooms-card-details">
+ 
+      <span class="rooms-icon">🛏️</span><strong class="rooms-small-bold">Room Type :</strong> {{ room.RoomType }}
+ 
+     </div>
+ 
+     <div class="rooms-card-details">
+ 
+      <span class="rooms-icon">🚪</span><strong class="rooms-small-bold">No of Rooms :</strong> {{ room.NoOfRooms }}
+ 
+     </div>
+ 
+     <div class="rooms-card-details">
+ 
+      <span class="rooms-icon">📍</span><strong class="rooms-small-bold">Location :</strong> {{ room.Location }}
+ 
+     </div>
+ 
+     <div class="rooms-card-details">
+ 
+      <span class="rooms-icon">✔️</span><strong class="rooms-small-bold">Available :</strong> {{ room.IsAvailable ? 'Yes' : 'No' }}
+ 
+     </div>
+ 
+    </div>
+ 
+    <div class="rooms-card-actions">
+ 
+     <button class="rooms-edit-button" (click)="edit(room.RoomId)">Edit</button>
+ 
+     <button class="rooms-delete-button" (click)="confirmDelete(room)">Delete</button>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+  <nav aria-label="Page navigation example" class="rooms-pagination-container mt-4">
+ 
+   <ul class="rooms-pagination">
+ 
+    <li class="rooms-page-item" *ngFor="let page of totalPagesArray" [class.active]="currentPage === page">
+ 
+     <button class="rooms-page-link" (click)="changePage(page)">{{ page }}</button>
+ 
+    </li>
+ 
+   </ul>
+ 
+  </nav>
+ 
+ </div>
+ 
+ 
+ 
+ <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+ 
+  <div class="modal-dialog modal-dialog-centered rooms-modal-dialog">
+ 
+   <div class="modal-content rooms-modal-content">
+ 
+    <div class="modal-body rooms-modal-body text-center">
+ 
+     <p>Are you sure you want to delete this room?</p>
+ 
+     <button class="rooms-modal-confirm" (click)="deleteRoom()" data-bs-dismiss="modal">Yes, Delete</button>
+ 
+     <button class="rooms-modal-cancel" data-bs-dismiss="modal">Cancel</button>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>

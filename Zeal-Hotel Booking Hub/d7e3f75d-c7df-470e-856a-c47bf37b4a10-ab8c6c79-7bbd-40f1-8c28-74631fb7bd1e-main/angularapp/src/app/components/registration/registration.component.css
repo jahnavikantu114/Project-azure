@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+
+.auth-container {
+
+  font-family: 'Montserrat', sans-serif;
+
+  display: flex;
+
+  min-height: 100vh;
+
+  color: #06202B;
+
+}
+
+
+
+/* Luxury Panel */
+
+.luxury-panel {
+
+  flex: 1;
+
+  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+
+  background-size: cover;
+
+  background-position: center;
+
+  position: relative;
+
+}
+
+
+
+.luxury-overlay {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background: linear-gradient(135deg, rgba(7, 122, 125, 0.85) 0%, rgba(6, 32, 43, 0.9) 100%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 2rem;
+
+}
+
+
+
+.luxury-content {
+
+  max-width: 500px;
+
+  color: white;
+
+  text-align: center;
+
+}
+
+
+
+.luxury-content h1 {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 300;
+
+  font-size: 2rem;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+.brand-title {
+
+  font-family: 'Playfair Display', serif;
+
+  font-weight: 700;
+
+  font-size: 3.5rem;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+
+.divider-line {
+
+  width: 100px;
+
+  height: 2px;
+
+  background: #7AE2CF;
+
+  margin: 0 auto 2rem;
+
+}
+
+
+
+.luxury-text {
+
+  font-size: 1.1rem;
+
+  line-height: 1.6;
+
+  margin-bottom: 2rem;
+
+  opacity: 0.9;
+
+}
+
+
+
+.luxury-features {
+
+  margin-top: 3rem;
+
+  text-align: left;
+
+}
+
+
+
+.feature-item {
+
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.9rem;
+
+}
+
+
+
+.feature-icon {
+
+  color: #7AE2CF;
+
+  font-size: 1.5rem;
+
+  margin-right: 1rem;
+
+  width: 20px;
+
+  display: inline-block;
+
+  text-align: center;
+
+}
+
+
+
+/* Registration Form */
+
+.registration-form-container {
+
+  flex: 1;
+
+  background: black;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 3rem;
+
+  overflow-y: auto;
+
+}
+
+
+
+.form-title {
+
+  font-family: 'Playfair Display', serif;
+
+  font-weight: 700;
+
+  font-size: 2.5rem;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #F5EEDD;
+
+  margin-bottom: 2rem;
+
+  text-align: center;
+
+}
+
+
+
+.elegant-form {
+
+  width: 100%;
+
+  max-width: 500px;
+
+}
+
+
+
+.form-field {
+
+  margin-bottom: 1.8rem;
+
+  position: relative;
+
+}
+
+
+
+.input-label {
+
+  display: block;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 0.5rem;
+
+  color: #F5EEDD;
+
+}
+
+
+
+.required-asterisk {
+
+  color: #e74c3c;
+
+}
+
+
+
+.elegant-input {
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border: 1px solid rgba(6, 32, 43, 0.1);
+
+  border-radius: 6px;
+
+  font-family: inherit;
+
+  background: white;
+
+  transition: all 0.3s ease;
+
+  font-size: 0.9rem;
+
+}
+
+
+
+.elegant-input:focus {
+
+  outline: none;
+
+  border-color: #7AE2CF;
+
+  box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+
+}
+
+
+
+.elegant-select {
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border: 1px solid rgba(6, 32, 43, 0.1);
+
+  border-radius: 6px;
+
+  font-family: inherit;
+
+  background: white url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23077A7D'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 1rem center;
+
+  background-size: 1em;
+
+  appearance: none;
+
+  transition: all 0.3s ease;
+
+  font-size: 0.9rem;
+
+}
+
+
+
+.elegant-select:focus {
+
+  outline: none;
+
+  border-color: #7AE2CF;
+
+  box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+
+}
+
+
+
+.error-message {
+
+  color: #e74c3c;
+
+  font-size: 0.8rem;
+
+  margin-top: 0.5rem;
+
+  min-height: 1.2rem;
+
+}
+
+
+
+.register-button {
+
+  width: 100%;
+
+  background: #077A7D;
+
+  color: white;
+
+  border: none;
+
+  padding: 1.2rem;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  margin-top: 1.5rem;
+
+}
+
+
+
+.register-button:hover {
+
+  background: #06202B;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(7, 122, 125, 0.3);
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+
+  .auth-container {
+
+    flex-direction: column;
+
+  }
+
+
+
+  .luxury-panel {
+
+    min-height: 300px;
+
+  }
+
+
+
+  .registration-form-container {
+
+    padding: 2rem;
+
+  }
+
+
+
+  .brand-title {
+
+    font-size: 2.5rem;
+
+  }
+
+
+
+  .form-title {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+
+
+@media (max-width: 576px) {
+
+  .luxury-content {
+
+    padding: 0 1rem;
+
+  }
+
+
+
+  .brand-title {
+
+    font-size: 2rem;
+
+  }
+
+
+
+  .luxury-content h1 {
+
+    font-size: 1.5rem;
+
+  }
+
+
+
+  .form-title {
+
+    font-size: 1.8rem;
+
+  }
+
+
+
+  .elegant-input,
+
+  .elegant-select {
+
+    padding: 0.8rem;
+
+  }
+
+}

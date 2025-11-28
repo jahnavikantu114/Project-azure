@@ -1,0 +1,76 @@
+/* Custom CSS for the navigation bar */
+.navbar {
+  background-color: #1A1A1A; /* Black background */
+}
+
+.navbar-brand {
+  color: #F5EEDD !important; /* Light blue color for the brand name */
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-link {
+  color: #f8f9fa !important; /* Light color for the links */
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link:hover {
+  color: #7AE2CF !important; /* Light blue color on hover */
+}
+
+.navbar-toggler {
+  border-color: #7AE2CF; /* Light blue color for the toggler border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28122, 226, 207, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav.active {
+  color: #7AE2CF !important; /* Light blue underline for active link */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap');
+
+.home-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #F5EEDD;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+.logout-btn {
+  background-color: #1A1A1A; /* Match the navbar background */
+  color: #F5EEDD; /* Light blue color for the text */
+  font-size: 14px; /* Font size */
+  padding: 8px 16px; /* Padding */
+  border: 2px solid #7AE2CF; /* Light blue border */
+  border-radius: 3px; /* Rounded corners */
+  font-family: 'Montserrat', sans-serif; /* Consistent font */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #7AE2CF; /* Light blue background on hover */
+  color: #1A1A1A; /* Dark text on hover */
+  box-shadow: 0 5px 7px rgba(122, 226, 207, 0.15); /* Enhanced shadow */
+  transform: scale(1.04); /* Slight scaling effect */
+}
+
+
+.form-select {
+  font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.navbar-user {
+  font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
+  color: white;
+  padding-right: 5px;
+}

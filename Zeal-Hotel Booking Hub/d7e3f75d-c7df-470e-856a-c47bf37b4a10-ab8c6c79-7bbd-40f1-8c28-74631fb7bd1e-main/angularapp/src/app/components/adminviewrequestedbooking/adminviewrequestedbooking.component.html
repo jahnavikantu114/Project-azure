@@ -1,0 +1,169 @@
+<div class="container booking-approval-container">
+
+    <h2 class="booking-approval-title">Booking Requests for Approval</h2>
+   
+    <div class="booking-approval-title-divider"></div>
+   
+     
+   
+    <div class="booking-approval-filters">
+   
+     <input 
+   
+      type="text" 
+   
+      class="booking-approval-search" 
+   
+      [(ngModel)]="searchTerm" 
+   
+      (input)="searchbyHotelName()" 
+   
+      placeholder="Search by Hotel Name"
+   
+     >
+   
+      
+   
+     <div class="booking-approval-filter-group">
+   
+      <label for="statusFilter" class="booking-approval-filter-label">Filter by Status:</label>
+   
+      <select 
+   
+       id="statusFilter" 
+   
+       class="booking-approval-filter-select" 
+   
+       (change)="filterByStatus($event.target.value)"
+   
+      >
+   
+       <option value="All">All</option>
+   
+       <option value="Approved">Approved</option>
+   
+       <option value="Rejected">Rejected</option>
+   
+      </select>
+   
+     </div>
+   
+    </div>
+   
+     
+   
+    <div class="booking-approval-table-container">
+   
+     <table class="booking-approval-table">
+   
+      <thead>
+   
+       <tr>
+   
+        <th>SL.No</th>
+   
+        <th>User Name</th>
+   
+        <th>Hotel Name</th>
+   
+        <th>Room Type</th>
+   
+        <th>No Of Rooms</th>
+   
+        <th>Check In Date</th>
+   
+        <th>Check Out Date</th>
+   
+        <th>Price Per Night</th>
+   
+        <th>Status</th>
+   
+        <th>Actions</th>
+   
+       </tr>
+   
+      </thead>
+   
+      <tbody>
+   
+       <tr *ngFor="let item of filteredBooking; let i = index">
+   
+        <td>{{ i + 1 }}</td>
+   
+        <td>{{ item.Username }}</td>
+   
+        <td>{{ item.Room?.HotelName }}</td>
+   
+        <td>{{ item.Room?.RoomType }}</td>
+   
+        <td>{{ item.Room?.NoOfRooms }}</td>
+   
+        <td>{{ item.CheckInDate | date:'mediumDate' }}</td>
+   
+        <td>{{ item.CheckOutDate | date:'mediumDate' }}</td>
+   
+        <td>{{ item.Room?.PricePerNight | currency:'INR' }}</td>
+   
+        <td>
+   
+         <span class="booking-approval-status" [ngClass]="{
+   
+          'approved': item.Status === 'Approved',
+   
+          'rejected': item.Status === 'Rejected',
+   
+          'pending': item.Status === 'Pending'
+   
+         }">
+   
+          {{ item.Status }}
+   
+         </span>
+   
+        </td>
+   
+        <td>
+   
+         <div class="booking-approval-actions">
+   
+          <button 
+   
+           *ngIf="item.Status !== 'Approved'" 
+   
+           (click)="updateStatus(item, 'Approved')" 
+   
+           class="booking-approval-approve"
+   
+          >
+   
+           Approve
+   
+          </button>
+   
+          <button 
+   
+           *ngIf="item.Status !== 'Rejected'" 
+   
+           (click)="updateStatus(item, 'Rejected')" 
+   
+           class="booking-approval-reject"
+   
+          >
+   
+           Reject
+   
+          </button>
+   
+         </div>
+   
+        </td>
+   
+       </tr>
+   
+      </tbody>
+   
+     </table>
+   
+    </div>
+   
+   </div>

@@ -1,0 +1,175 @@
+<div class="bookings-container">
+
+  <h2 class="bookings-title">MY BOOKINGS</h2>
+ 
+  <div class="title-divider"></div>
+ 
+ 
+ 
+  <div class="search-container">
+ 
+   <input 
+ 
+    type="text" 
+ 
+    placeholder="Search by Hotel Name" 
+ 
+    [(ngModel)]="searchQuery" 
+ 
+    (input)="searchBookings()" 
+ 
+    class="search-input"
+ 
+   >
+ 
+  </div>
+ 
+ 
+ 
+  <div class="bookings-table-container">
+ 
+   <table class="bookings-table">
+ 
+    <thead>
+ 
+     <tr>
+ 
+      <th>S.No</th>
+ 
+      <th>Hotel Name</th>
+ 
+      <th>Check-In</th>
+ 
+      <th>Check-Out</th>
+ 
+      <th>Special Requests</th>
+ 
+      <th>Booking Purpose</th>
+ 
+      <th>Rooms</th>
+ 
+      <th>Status</th>
+ 
+      <th>Action</th>
+ 
+     </tr>
+ 
+    </thead>
+ 
+    <tbody>
+ 
+     <tr *ngFor="let booking of filteredBookings; let i = index">
+ 
+      <td>{{ i + 1 }}</td>
+ 
+      <td>{{ booking.Room?.HotelName }}</td>
+ 
+      <td>{{ booking.CheckInDate | date:'mediumDate' }}</td>
+ 
+      <td>{{ booking.CheckOutDate | date:'mediumDate' }}</td>
+ 
+      <td class="truncate-text">{{ booking.SpecialRequests }}</td>
+ 
+      <td>{{ booking.BookingPurpose }}</td>
+ 
+      <td>{{ booking.Room?.NoOfRooms }}</td>
+ 
+      <td>
+ 
+       <span class="status-badge" [ngClass]="{
+ 
+        'approved': booking.Status === 'Approved',
+ 
+        'pending': booking.Status === 'Pending',
+ 
+        'rejected': booking.Status === 'Rejected'
+ 
+       }">
+ 
+        {{ booking.Status }}
+ 
+       </span>
+ 
+      </td>
+ 
+      <td>
+ 
+       <button 
+ 
+        (click)="confirmDelete(booking)"
+ 
+        [disabled]="booking.Status === 'Approved' || booking.Status === 'Rejected'"
+ 
+        class="delete-button"
+ 
+        [ngClass]="{
+ 
+         'disabled-button': booking.Status === 'Approved' || booking.Status === 'Rejected'
+ 
+        }"
+ 
+       >
+ 
+        Delete
+ 
+       </button>
+ 
+      </td>
+ 
+     </tr>
+ 
+    </tbody>
+ 
+   </table>
+ 
+ 
+ 
+   <div *ngIf="filteredBookings.length === 0" class="no-bookings-message">
+ 
+    No bookings found matching your search criteria.
+ 
+   </div>
+ 
+  </div>
+ 
+ 
+ 
+  <!-- Delete Confirmation Modal -->
+ 
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+ 
+   <div class="modal-dialog modal-dialog-centered">
+ 
+    <div class="modal-content">
+ 
+     <div class="modal-body">
+ 
+      <h3 class="modal-title">Confirm Deletion</h3>
+ 
+      <p>Are you sure you want to delete this booking?</p>
+ 
+      <div class="modal-actions">
+ 
+       <button class="confirm-delete" (click)="deleteBooking()" data-bs-dismiss="modal">
+ 
+        Yes, Delete
+ 
+       </button>
+ 
+       <button class="cancel-delete" data-bs-dismiss="modal">
+ 
+        Cancel
+ 
+       </button>
+ 
+      </div>
+ 
+     </div>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>

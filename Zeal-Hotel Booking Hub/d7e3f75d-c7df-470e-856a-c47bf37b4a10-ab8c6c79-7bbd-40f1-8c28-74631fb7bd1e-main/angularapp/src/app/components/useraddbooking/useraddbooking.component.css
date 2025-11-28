@@ -1,0 +1,356 @@
+
+/* Base Styles */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+ 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+
+.booking-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ max-width: 1200px;
+
+ margin: 2rem auto;
+
+ padding: 2rem;
+
+}
+
+
+
+.booking-card {
+
+ background-color: #F5EEDD !important;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+ border: none;
+
+}
+
+
+
+.booking-card-body {
+
+ padding: 2rem;
+
+}
+
+
+
+.booking-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #077A7D;
+
+ text-align: center;
+
+ margin-bottom: 0.5rem;
+
+ letter-spacing: 1px;
+
+ text-transform: none;
+
+}
+
+
+
+.booking-title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #7AE2CF;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.booking-form {
+
+ margin-top: 2rem;
+
+}
+
+
+
+.booking-form-group {
+
+ margin-bottom: 1.5rem;
+
+}
+
+
+
+.booking-label {
+
+ display: block;
+
+ margin-bottom: 0.5rem;
+
+ font-weight: 600;
+
+ color: #06202B;
+
+ text-transform: uppercase;
+
+ font-size: 0.85rem;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.booking-input, .booking-textarea {
+
+ width: 100%;
+
+ padding: 0.8rem 1rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.2);
+
+ border-radius: 4px;
+
+ font-size: 1rem;
+
+ transition: all 0.3s ease;
+
+ background-color: white;
+
+ text-transform: none;
+
+ letter-spacing: normal;
+
+}
+
+
+
+.booking-input:focus, .booking-textarea:focus {
+
+ border-color: #077A7D;
+
+ box-shadow: 0 0 0 0.2rem rgba(7, 122, 125, 0.25);
+
+ outline: none;
+
+}
+
+
+
+.booking-textarea {
+
+ min-height: 100px;
+
+ resize: vertical;
+
+}
+
+
+
+.booking-error {
+
+ color: #e74c3c;
+
+ font-size: 0.85rem;
+
+ margin-top: 0.5rem;
+
+ text-transform: none;
+
+}
+
+
+
+.booking-error-message {
+
+ color: #e74c3c;
+
+ font-size: 0.9rem;
+
+ margin-top: 1rem;
+
+ text-align: center;
+
+ text-transform: none;
+
+}
+
+
+
+.booking-back-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.5rem 1rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ float: right;
+
+ text-transform: uppercase;
+
+ font-size: 0.85rem;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.booking-back-button:hover {
+
+ background: #06202B;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+.booking-submit-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.7rem 1.5rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ width: 100%;
+
+ margin-top: 1rem;
+
+ text-transform: uppercase;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.booking-submit-button:hover {
+
+ background: #06202B;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+/* Success Modal Styles */
+
+.booking-success-modal {
+
+ max-width: 300px;
+
+}
+
+
+
+.booking-success-content {
+
+ border-radius: 10px;
+
+ border: none;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+ background: #077A7D;
+
+ color: white;
+
+}
+
+
+
+.booking-success-body {
+
+ padding: 2rem;
+
+ font-weight: 600;
+
+ font-size: 1.2rem;
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .booking-container {
+
+  padding: 1rem;
+
+  margin: 1rem;
+
+ }
+
+  
+
+ .booking-title {
+
+  font-size: 1.8rem;
+
+ }
+
+  
+
+ .booking-card-body {
+
+  padding: 1.5rem;
+
+ }
+
+  
+
+ .booking-input, .booking-textarea {
+
+  padding: 0.7rem;
+
+ }
+
+  
+
+ .booking-label {
+
+  font-size: 0.8rem;
+
+ }
+
+}

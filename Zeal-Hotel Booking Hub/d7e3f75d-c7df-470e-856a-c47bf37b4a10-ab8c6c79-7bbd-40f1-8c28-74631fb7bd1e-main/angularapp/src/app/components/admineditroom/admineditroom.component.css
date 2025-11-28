@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+ 
+ 
+ 
+.edit-room-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ max-width: 1200px;
+
+ margin: 2rem auto;
+
+ padding: 2rem;
+
+}
+
+
+
+.edit-room-card {
+
+ background-color: #F5EEDD !important;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+ border: 2px solid #aeded9 !important;
+
+}
+
+
+
+.edit-room-card-body {
+
+ padding: 2rem;
+
+}
+
+
+
+.edit-room-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #004d40;
+
+ text-align: center;
+
+ margin-bottom: 0.5rem;
+
+ letter-spacing: 1px;
+
+ position: relative;
+
+}
+
+
+
+.edit-room-title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #7AE2CF;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.edit-room-back-button {
+
+ background: #e74c3c;
+
+ color: white;
+
+ border: none;
+
+ padding: 5px 8px;
+
+ border-radius: 4px;
+
+ font-weight: 100;
+
+ font-size: 20px;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ position: absolute;
+
+ right: 0;
+
+ top: 50%;
+
+ transform: translateY(-50%);
+
+}
+
+
+
+.edit-room-back-button:hover {
+
+ background: #c0392b;
+
+ transform: translateY(-50%) translateY(-1px);
+
+}
+
+
+
+.edit-room-form {
+
+ margin-top: 2rem;
+
+}
+
+
+
+.edit-room-form-group {
+
+ margin-bottom: 1.5rem;
+
+}
+
+
+
+.edit-room-label {
+
+ display: block;
+
+ margin-bottom: 0.5rem;
+
+ font-weight: 600;
+
+ color: #06202B;
+
+ text-transform: uppercase;
+
+ font-size: 0.85rem;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.edit-room-input, .edit-room-textarea, .edit-room-file-input, 
+
+.edit-room-select {
+
+ width: 100%;
+
+ padding: 0.8rem 1rem;
+
+ border: 1px solid #aeded9;
+
+ border-radius: 4px;
+
+ font-size: 1rem;
+
+ transition: all 0.3s ease;
+
+ background-color: white;
+
+ min-height: 50px;
+
+}
+
+
+
+.edit-room-select {
+
+ appearance: none;
+
+ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+
+ background-repeat: no-repeat;
+
+ background-position: right 1rem center;
+
+ background-size: 1em;
+
+}
+
+
+
+.edit-room-input:focus, .edit-room-textarea:focus, .edit-room-select:focus {
+
+ border-color: #077A7D;
+
+ box-shadow: 0 0 0 0.2rem rgba(122, 226, 207, 0.25);
+
+ outline: none;
+
+}
+
+
+
+.edit-room-textarea {
+
+ min-height: 100px;
+
+ resize: vertical;
+
+}
+
+
+
+.edit-room-file-input {
+
+ padding: 0.5rem;
+
+}
+
+
+
+.edit-room-error {
+
+ color: #e74c3c;
+
+ font-size: 0.85rem;
+
+ margin-top: 0.5rem;
+
+}
+
+
+
+.edit-room-error-message {
+
+ color: #e74c3c;
+
+ font-size: 0.9rem;
+
+ margin-top: 1rem;
+
+ text-align: center;
+
+}
+
+
+
+.edit-room-submit-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.7rem 1.5rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ width: 100%;
+
+ margin-top: 1rem;
+
+}
+
+
+
+.edit-room-submit-button:hover {
+
+ background: #06202B;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+.edit-room-success-popup {
+
+ position: fixed;
+
+ top: 0;
+
+ left: 0;
+
+ right: 0;
+
+ bottom: 0;
+
+ background: rgba(0, 0, 0, 0.5);
+
+ display: flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+ z-index: 1000;
+
+}
+
+
+
+.edit-room-popup-content {
+
+ background: white;
+
+ padding: 2rem;
+
+ border-radius: 8px;
+
+ text-align: center;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.edit-room-popup-content p {
+
+ font-size: 1.2rem;
+
+ margin-bottom: 1.5rem;
+
+ color: #004d40;
+
+}
+
+
+
+.edit-room-popup-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.5rem 1.5rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+}
+
+
+
+.edit-room-popup-button:hover {
+
+ background: #06202B;
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .edit-room-container {
+
+  padding: 1rem;
+
+  margin: 1rem;
+
+ }
+
+  
+
+ .edit-room-title {
+
+  font-size: 1.8rem;
+
+  padding-bottom: 2.5rem;
+
+ }
+
+  
+
+ .edit-room-back-button {
+
+  position: relative;
+
+  top: auto;
+
+  right: auto;
+
+  transform: none;
+
+  margin-top: 1rem;
+
+  float: none;
+
+  display: block;
+
+  width: 100%;
+
+ }
+
+  
+
+ .edit-room-card-body {
+
+  padding: 1.5rem;
+
+ }
+
+  
+
+ .edit-room-input, 
+
+ .edit-room-textarea,
+
+ .edit-room-file-input,
+
+ .edit-room-select {
+
+  padding: 0.7rem;
+
+  min-height: 45px;
+
+ }
+
+}

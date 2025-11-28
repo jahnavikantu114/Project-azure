@@ -1,0 +1,84 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.main-container {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh; /* Adjust the height as needed */
+    width: 100%; /* Ensure it takes the full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(7, 122, 125, 0.7) 0%, rgba(6, 32, 43, 0.7) 100%), url('/assets/images/galen-crout-anPsLBVvZ_o-unsplash.jpg'); 
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+  }
+  
+  
+
+/* Welcome Panel */
+.welcome-panel {
+  flex: 1;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-content {
+  max-width: 500px;
+  text-align: center;
+}
+
+.welcome-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 3 rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.hotel-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title-line {
+  width: 100px;
+  height: 2px;
+  background: #7AE2CF;
+  margin: 0 auto 2rem;
+}
+
+.welcome-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Footer Styles */
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  background: #06202B;
+  color: #F5EEDD;
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.footer a {
+  color: #7AE2CF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #077A7D;
+  text-decoration: underline;
+}

@@ -1,0 +1,497 @@
+/* Base Styles */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+ 
+ 
+ 
+.rooms-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ max-width: 1200px;
+
+ margin: 2rem auto;
+
+ padding: 1.5rem;
+
+ background-color: #F5EEDD;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.rooms-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #077A7D;
+
+ text-align: center;
+
+ margin-bottom: 1.5rem;
+
+ letter-spacing: 1px;
+
+}
+
+
+
+.title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #7AE2CF;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.search-container {
+
+ max-width: 600px;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.search-input {
+
+ width: 100%;
+
+ padding: 0.8rem 1.2rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.2);
+
+ border-radius: 30px;
+
+ font-size: 1rem;
+
+ transition: all 0.3s ease;
+
+ background-color: white;
+
+}
+
+
+
+.search-input:focus {
+
+ outline: none;
+
+ border-color: #7AE2CF;
+
+ box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+
+}
+
+
+
+.no-rooms-message {
+
+ text-align: center;
+
+ padding: 2rem;
+
+ color: #06202B;
+
+ font-size: 1.1rem;
+
+ background-color: white;
+
+ border-radius: 8px;
+
+ margin: 1rem 0;
+
+}
+
+
+
+.rooms-grid {
+
+ display: grid;
+
+ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+ gap: 1.5rem;
+
+ margin-top: 1.5rem;
+
+}
+
+
+
+.room-card {
+
+ background: white;
+
+ border-radius: 10px;
+
+ overflow: hidden;
+
+ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+ transition: transform 0.3s ease;
+
+}
+
+
+
+.room-card:hover {
+
+ transform: translateY(-5px);
+
+}
+
+
+
+.room-image-container {
+
+ height: 200px;
+
+ overflow: hidden;
+
+}
+
+
+
+.room-image {
+
+ width: 100%;
+
+ height: 100%;
+
+ object-fit: cover;
+
+ transition: transform 0.5s ease;
+
+}
+
+
+
+.room-card:hover .room-image {
+
+ transform: scale(1.05);
+
+}
+
+
+
+.room-header {
+
+ display: flex;
+
+ justify-content: space-between;
+
+ align-items: center;
+
+ padding: 1rem 1.5rem;
+
+ background-color: #077A7D;
+
+ color: white;
+
+}
+
+
+
+.hotel-name {
+
+ font-weight: 600;
+
+ font-size: 1.2rem;
+
+}
+
+
+
+.room-price {
+
+ font-weight: 700;
+
+ background-color: #06202B;
+
+ padding: 0.3rem 0.8rem;
+
+ border-radius: 20px;
+
+ font-size: 0.9rem;
+
+}
+
+
+
+.room-details {
+
+ padding: 1.5rem;
+
+}
+
+
+
+.detail-item {
+
+ display: flex;
+
+ align-items: center;
+
+ margin-bottom: 0.8rem;
+
+ color: #06202B;
+
+}
+
+
+
+.detail-icon {
+
+ margin-right: 0.8rem;
+
+ font-size: 1.1rem;
+
+}
+
+
+
+.detail-label {
+
+ font-weight: 600;
+
+ margin-right: 0.5rem;
+
+ font-size: 0.9rem;
+
+}
+
+
+
+.detail-value {
+
+ font-size: 0.9rem;
+
+}
+
+
+
+.room-actions {
+
+ padding: 0 1.5rem 1.5rem;
+
+ text-align: center;
+
+}
+
+
+
+.book-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.7rem 1.5rem;
+
+ border-radius: 30px;
+
+ font-weight: 600;
+
+ text-transform: uppercase;
+
+ letter-spacing: 1px;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ width: 100%;
+
+}
+
+
+
+.book-button:hover {
+
+ background: #06202B;
+
+ transform: translateY(-2px);
+
+ box-shadow: 0 3px 10px rgba(7, 122, 125, 0.3);
+
+}
+
+
+
+.booked-button {
+
+ background: #e74c3c;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.7rem 1.5rem;
+
+ border-radius: 30px;
+
+ font-weight: 600;
+
+ text-transform: uppercase;
+
+ letter-spacing: 1px;
+
+ width: 100%;
+
+ cursor: not-allowed;
+
+}
+
+
+
+.pagination-container {
+
+ margin-top: 3rem;
+
+ display: flex;
+
+ justify-content: center;
+
+}
+
+
+
+.pagination {
+
+ display: flex;
+
+ gap: 0.5rem;
+
+}
+
+
+
+.page-button {
+
+ padding: 0.5rem 1rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.1);
+
+ border-radius: 4px;
+
+ background: white;
+
+ color: #06202B;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+}
+
+
+
+.page-button:hover {
+
+ background: rgba(122, 226, 207, 0.1);
+
+}
+
+
+
+.page-button.active {
+
+ background: #077A7D;
+
+ color: white;
+
+ border-color: #077A7D;
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .rooms-container {
+
+  padding: 1rem;
+
+  margin: 1rem;
+
+ }
+
+  
+
+ .rooms-title {
+
+  font-size: 1.8rem;
+
+ }
+
+  
+
+ .rooms-grid {
+
+  grid-template-columns: 1fr;
+
+ }
+
+  
+
+ .room-header {
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 0.5rem;
+
+ }
+
+  
+
+ .room-price {
+
+  align-self: flex-end;
+
+ }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+ .search-input {
+
+  padding: 0.7rem 1rem;
+
+ }
+
+  
+
+ .pagination {
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+ }
+
+}

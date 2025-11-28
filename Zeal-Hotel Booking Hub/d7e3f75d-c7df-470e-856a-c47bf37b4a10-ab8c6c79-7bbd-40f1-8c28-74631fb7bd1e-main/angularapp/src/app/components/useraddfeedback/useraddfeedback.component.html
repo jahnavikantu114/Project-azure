@@ -1,0 +1,100 @@
+<div class="feedback-container">
+
+  <div class="feedback-card">
+ 
+   <h2 class="feedback-title">SHARE YOUR EXPERIENCE</h2>
+ 
+   <div class="title-divider"></div>
+ 
+    
+ 
+   <form #feedbackForm="ngForm" (ngSubmit)="addFeedback()" class="feedback-form">
+ 
+    <div class="form-group">
+ 
+     <label for="feedback" class="feedback-label">FEEDBACK<span class="required-asterisk">*</span></label>
+ 
+     <textarea 
+ 
+      id="feedback" 
+ 
+      name="feedback" 
+ 
+      [(ngModel)]="feedback.FeedbackText" 
+ 
+      #feedbackNg="ngModel" 
+ 
+      required 
+ 
+      class="feedback-input"
+ 
+      placeholder="We value your thoughts about your stay"
+ 
+     ></textarea>
+ 
+     <div class="error-message" *ngIf="feedbackNg.invalid && (feedbackNg.dirty || feedbackNg.touched)">
+ 
+      Feedback is required
+ 
+     </div>
+ 
+    </div>
+ 
+     
+ 
+    <button 
+ 
+     type="submit" 
+ 
+     [disabled]="feedbackForm.invalid" 
+ 
+     class="submit-button"
+ 
+    >
+ 
+     SUBMIT FEEDBACK
+ 
+    </button>
+ 
+   </form>
+ 
+  </div>
+ 
+ </div>
+ 
+ 
+ 
+ <!-- Modal (unchanged functionality) -->
+ 
+ <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+ 
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+ 
+   <div class="modal-content">
+ 
+    <div class="modal-body text-center">
+ 
+     Successfully Added!
+ 
+    </div>
+ 
+    <div class="modal-footer justify-content-center">
+ 
+     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>
+ 
+ 
+ 
+ <style>
+ 
+ /* Base Styles */
+ 
+
+ </style>

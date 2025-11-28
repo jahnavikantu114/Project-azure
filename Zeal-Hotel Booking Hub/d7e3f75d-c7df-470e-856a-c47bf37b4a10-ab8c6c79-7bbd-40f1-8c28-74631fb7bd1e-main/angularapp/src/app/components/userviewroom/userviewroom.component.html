@@ -1,0 +1,195 @@
+<div class="rooms-container">
+
+  <h2 class="rooms-title">AVAILABLE ROOMS</h2>
+ 
+  <div class="title-divider"></div>
+ 
+ 
+ 
+  <div class="search-container">
+ 
+   <input
+ 
+    type="text"
+ 
+    class="search-input"
+ 
+    placeholder="Search by Hotel Name, Room Type, or Location"
+ 
+    [(ngModel)]="searchTerm"
+ 
+    (input)="searchByHotelNameRoomTypeLocation()"
+ 
+   />
+ 
+  </div>
+ 
+ 
+ 
+  <div *ngIf="filteredTerm.length === 0" class="no-rooms-message">
+ 
+   No rooms found matching your search criteria.
+ 
+  </div>
+ 
+ 
+ 
+  <div class="rooms-grid">
+ 
+   <div *ngFor="let room of paginatedRooms; let i = index" class="room-card">
+ 
+    <div class="room-image-container">
+ 
+     <img [src]="room.ImageUrl" alt="Room image" class="room-image" onerror="this.src='/assets/images/default-room.jpg'">
+ 
+    </div>
+ 
+     
+ 
+    <div class="room-header">
+ 
+     <div class="hotel-name">{{ room.HotelName }}</div>
+ 
+     <div class="room-price">{{ room.PricePerNight | currency:'INR' }}/night</div>
+ 
+    </div>
+ 
+     
+ 
+    <div class="room-details">
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">🛏️</span>
+ 
+      <span class="detail-label">Room Type:</span>
+ 
+      <span class="detail-value">{{ room.RoomType }}</span>
+ 
+     </div>
+ 
+      
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">🚪</span>
+ 
+      <span class="detail-label">Available:</span>
+ 
+      <span class="detail-value">{{ room.NoOfRooms }} rooms</span>
+ 
+     </div>
+ 
+      
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">📍</span>
+ 
+      <span class="detail-label">Location:</span>
+ 
+      <span class="detail-value">{{ room.Location }}</span>
+ 
+     </div>
+ 
+      
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">🛌</span>
+ 
+      <span class="detail-label">Bed Type:</span>
+ 
+      <span class="detail-value">{{ room.BedType }}</span>
+ 
+     </div>
+ 
+      
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">📝</span>
+ 
+      <span class="detail-label">Description:</span>
+ 
+      <span class="detail-value">{{ room.Description }}</span>
+ 
+     </div>
+ 
+      
+ 
+     <div class="detail-item">
+ 
+      <span class="detail-icon">✔️</span>
+ 
+      <span class="detail-label">Facilities:</span>
+ 
+      <span class="detail-value">{{ room.Facilities }}</span>
+ 
+     </div>
+ 
+    </div>
+ 
+     
+ 
+    <div class="room-actions">
+ 
+     <button 
+ 
+      *ngIf="!isRoomBookedByUser(room.RoomId)" 
+ 
+      class="book-button"
+ 
+      (click)="bookNow(room.RoomId)"
+ 
+     >
+ 
+      BOOK NOW
+ 
+     </button>
+ 
+     <button 
+ 
+      *ngIf="isRoomBookedByUser(room.RoomId)" 
+ 
+      class="booked-button"
+ 
+     >
+ 
+      BOOKED
+ 
+     </button>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ 
+ 
+  <div class="pagination-container">
+ 
+   <div class="pagination">
+ 
+    <button 
+ 
+     class="page-button"
+ 
+     *ngFor="let page of totalPagesArray" 
+ 
+     [class.active]="currentPage === page"
+ 
+     (click)="changePage(page)"
+ 
+    >
+ 
+     {{ page }}
+ 
+    </button>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>

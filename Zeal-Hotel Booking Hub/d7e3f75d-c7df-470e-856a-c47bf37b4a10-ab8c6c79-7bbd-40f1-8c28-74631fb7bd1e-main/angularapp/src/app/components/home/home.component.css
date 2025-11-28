@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap');
+
+.home-container {
+ font-family: 'Montserrat', sans-serif;
+ color: #000000  ;
+ background-color:  #F5EEDD;
+ overflow-x: hidden;
+}
+
+
+h1, h2, h3, h4 {
+ font-family: 'Playfair Display', serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: black;
+}
+
+.main-title {
+ font-size: 5.5rem;
+ line-height: 1;
+ margin: 0;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+ @media (max-width: 768px) {
+  font-size: 3.5rem;
+ }
+}
+
+.section-title {
+ font-size: 2.5rem;
+ text-align: center;
+ margin-bottom: 3rem;
+ position: relative;
+ color: #F5EEDD;
+ &::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #7AE2CF;
+ }
+ @media (max-width: 768px) {
+  font-size: 2rem;
+ }
+}
+
+/* Hero Section */
+.hero-section {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ min-height: 90vh;
+ @media (max-width: 1024px) {
+  grid-template-columns: 1fr;
+ }
+}
+
+.hero-content {
+ background:   #F5EEDD;  
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 4rem;
+ position: relative;
+ @media (max-width: 1024px) {
+  padding: 2rem;
+  min-height: 50vh;
+ }
+}
+
+.hero-subtitle {
+ font-size: 1.5rem;
+ font-weight: 300;
+ margin: 1.5rem 0 3rem;
+ color: #083830;
+}
+
+.hero-image {
+ background: url('https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+ background-size: cover;
+ background-position: center;
+ @media (max-width: 1024px) {
+  min-height: 50vh;
+ }
+}
+
+.explore-button {
+ background: #7AE2CF;
+ color: #000000;
+ border: none;
+ padding: 1.2rem 2.5rem;
+ font-size: 1rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ align-self: flex-start;
+ &:hover {
+  background: #F5EEDD;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(7, 122, 125, 0.3);
+ }
+}
+
+/* Value Proposition Section */
+.value-section {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 2rem;
+ padding: 5rem;
+ background:#F5EEDD;
+ @media (max-width: 768px) {
+  grid-template-columns: 1fr;
+  padding: 3rem 1.5rem;
+ }
+}
+
+.value-card {
+ text-align: center;
+ padding: 2rem;
+ transition: transform 0.3s ease;
+ background: #333333;
+ color: #F5EEDD;
+ &:hover {
+  transform: translateY(-10px);
+ }
+}
+
+.value-icon {
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
+ color: #7AE2CF;
+}
+
+.value-card h3 {
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ color: #7AE2CF;
+}
+
+.value-card p {
+ color: #F5EEDD;
+ line-height: 1.6;
+}
+
+/* Destinations Section */
+.destinations-section {
+ padding: 6rem 3rem;
+ background: #000000;
+}
+
+.destinations-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+.destination-card {
+ height: 400px;
+ position: relative;
+ border-radius: 8px;
+ overflow: hidden;
+ transition: all 0.4s ease;
+ background: #333333;
+ &:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  .destination-overlay {
+   opacity: 1;
+  }
+ }
+}
+
+.destination-image {
+ height: 100%;
+ width: 100%;
+ background-size: cover;
+ background-position: center;
+ transition: all 0.4s ease;
+}
+
+.destination-overlay {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background: linear-gradient(to top, rgba(6, 32, 43, 0.9) 0%, transparent 100%);
+ color: white;
+ padding: 2rem;
+ opacity: 1;
+ transition: opacity 0.3s ease;
+ h3 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+ }
+ p {
+  margin: 0;
+  font-weight: 300;
+ }
+}
+
+/* Luxury Experience Section */
+.luxury-section { 
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ min-height: 70vh;
+ @media (max-width: 1024px) {
+  grid-template-columns: 1fr;
+ }
+}
+
+.luxury-content {
+ background: #F5EEDD;
+ color: black;
+ padding: 4rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ @media (max-width: 1024px) {
+  padding: 2rem;
+  order: 2;
+ }
+}
+
+.luxury-description {
+ font-size: 1.2rem;
+ line-height: 1.8;
+ margin: 2rem 0;
+ max-width: 500px;
+ color: #000000;
+}
+
+.luxury-image {
+ background: url('https://images.unsplash.com/photo-1535827841776-24afc1e255ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+ background-size: cover;
+ background-position: center;
+ @media (max-width: 1024px) {
+  min-height: 50vh;
+ }
+}
+
+.luxury-button {
+ background: #7AE2CF;
+ color: #000000;
+ border: none;
+ padding: 1.2rem 2.5rem;
+ font-size: 1rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ align-self: flex-start;
+ &:hover {
+  background: #F5EEDD;
+  color: #06202B;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+ padding: 6rem 3rem;
+ background: #1A1A1A;
+}
+
+.testimonials-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+.testimonial-card {
+ background: #333333;
+ padding: 2rem;
+ border-radius: 8px;
+ transition: transform 0.3s ease;
+ color: #F5EEDD;
+ &:hover {
+  transform: translateY(-10px);
+ }
+}
+
+.testimonial-rating {
+ color: #7AE2CF;
+ font-size: 1.2rem;
+ margin-bottom: 1rem;
+}
+
+.testimonial-text {
+ font-style: italic;
+ line-height: 1.8;
+ margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+ display: flex;
+ align-items: center;
+}
+
+.author-avatar {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background-size: cover;
+ background-position: center;
+ margin-right: 1rem;
+}
+
+.author-info h4 {
+ font-size: 1rem;
+ margin: 0 0 0.2rem;
+}
+
+.author-info p {
+ font-size: 0.8rem;
+ margin: 0;
+ color: #7AE2CF;
+}
+
+/* Animations */
+@keyframes fadeIn {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+
+.destination-card, .testimonial-card, .value-card {
+ animation: fadeIn 0.6s ease-out forwards;
+}
+
+.destination-card:nth-child(1) { animation-delay: 0.1s; }
+.destination-card:nth-child(2) { animation-delay: 0.2s; }
+.destination-card:nth-child(3) { animation-delay: 0.3s; }
+.destination-card:nth-child(4) { animation-delay: 0.4s; }
+
+
+/* Newsletter Section */
+
+.newsletter-section {
+
+    padding: 8rem 2rem;
+   
+    background: black;
+   
+    color: white;
+   
+    text-align: center;
+   
+     
+   
+    @media (max-width: 768px) {
+   
+     padding: 5rem 1.5rem;
+   
+    }
+   
+   }
+   
+   
+   
+   .newsletter-content {
+   
+    max-width: 600px;
+   
+    margin: 0 auto;
+   
+   }
+   
+   
+   
+   .newsletter-title {
+   
+    font-size: 2.5rem;
+   
+    letter-spacing: 3px;
+   
+    margin-bottom: 2rem;
+   
+     
+   
+    @media (max-width: 768px) {
+   
+     font-size: 2rem;
+   
+    }
+   
+   }
+   
+   
+   
+   .newsletter-text {
+   
+    font-size: 1.2rem;
+   
+    line-height: 1.8;
+   
+    margin-bottom: 3rem;
+   
+    opacity: 0.8;
+   
+     
+   
+    @media (max-width: 768px) {
+   
+     font-size: 1rem;
+   
+    }
+   
+   }
+   
+   
+   
+   .newsletter-form {
+   
+    display: flex;
+   
+    max-width: 500px;
+   
+    margin: 0 auto;
+   
+     
+   
+    @media (max-width: 768px) {
+   
+     flex-direction: column;
+   
+    }
+   
+   }
+   
+   
+   
+   .newsletter-input {
+   
+    flex: 1;
+   
+    padding: 1.2rem;
+   
+    border: none;
+   
+    font-family: inherit;
+   
+    font-size: 1rem;
+   
+     
+   
+    &:focus {
+   
+     outline: none;
+   
+    }
+   
+     
+   
+    @media (max-width: 768px) {
+   
+     margin-bottom: 1rem;
+   
+    }
+   
+   }
+   
+   
+   
+   .newsletter-button {
+   
+    background: #7AE2CF;
+   
+    color: #06202B;
+   
+    border: none;
+   
+    padding: 1.2rem 2.5rem;
+   
+    font-size: 1rem;
+   
+    font-weight: 600;
+   
+    text-transform: uppercase;
+   
+    letter-spacing: 1px;
+   
+    cursor: pointer;
+   
+    transition: all 0.3s ease;
+   
+     
+   
+    &:hover {
+   
+     background: #077A7D;
+   
+     color: white;
+   
+    }
+   
+   }
+   
+   .luxury-title{
+
+    color: black;
+   }
+
+   .destination-title{
+    color: #F5EEDD;
+   }
+
+   .author-name{
+    color: #F5EEDD;
+   }
+

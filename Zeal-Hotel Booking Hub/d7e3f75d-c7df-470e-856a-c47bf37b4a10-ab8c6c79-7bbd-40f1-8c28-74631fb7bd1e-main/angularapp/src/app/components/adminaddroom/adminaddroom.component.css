@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+ 
+ 
+ 
+.add-room-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ max-width: 1200px;
+
+ margin: 2rem auto;
+
+ padding: 2rem;
+
+}
+
+
+
+.add-room-card {
+
+ background-color: #F5EEDD !important;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+ border: 2px solid #aeded9 !important;
+
+}
+
+
+
+.add-room-card-body {
+
+ padding: 2rem;
+
+}
+
+
+
+.add-room-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #004d40;
+
+ text-align: center;
+
+ margin-bottom: 0.5rem;
+
+ letter-spacing: 1px;
+
+}
+
+
+
+.add-room-title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #232726;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.add-room-form {
+
+ margin-top: 2rem;
+
+}
+
+
+
+.add-room-form-group {
+
+ margin-bottom: 1.5rem;
+
+}
+
+
+
+.add-room-label {
+
+ display: block;
+
+ margin-bottom: 0.5rem;
+
+ font-weight: 600;
+
+ color: #06202B;
+
+ text-transform: uppercase;
+
+ font-size: 0.85rem;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.add-room-input, .add-room-textarea, .add-room-file-input {
+
+ width: 100%;
+
+ padding: 0.8rem 1rem;
+
+ border: 1px solid #aeded9;
+
+ border-radius: 4px;
+
+ font-size: 1rem;
+
+ transition: all 0.3s ease;
+
+ background-color: white;
+
+}
+
+
+
+.add-room-input:focus, .add-room-textarea:focus {
+
+ border-color: #077A7D;
+
+ box-shadow: 0 0 0 0.2rem rgba(122, 226, 207, 0.25);
+
+ outline: none;
+
+}
+
+
+
+.add-room-textarea {
+
+ min-height: 100px;
+
+ resize: vertical;
+
+}
+
+
+
+.add-room-file-input {
+
+ padding: 0.5rem;
+
+}
+
+
+
+.add-room-error {
+
+ color: #e74c3c;
+
+ font-size: 0.85rem;
+
+ margin-top: 0.5rem;
+
+}
+
+
+
+.add-room-error-message {
+
+ color: #e74c3c;
+
+ font-size: 0.9rem;
+
+ margin-top: 1rem;
+
+ text-align: center;
+
+}
+
+
+
+.add-room-submit-button {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.7rem 1.5rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ width: 100%;
+
+ margin-top: 1rem;
+
+}
+
+
+
+.add-room-submit-button:hover {
+
+ background: #06202B;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+.add-room-submit-button:disabled {
+
+ background: #cccccc;
+
+ cursor: not-allowed;
+
+}
+
+
+
+/* Success Modal Styles */
+
+.add-room-success-modal {
+
+ max-width: 300px;
+
+}
+
+
+
+.add-room-success-content {
+
+ border-radius: 10px;
+
+ border: none;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+ background: #077A7D;
+
+ color: white;
+
+}
+
+
+
+.add-room-success-body {
+
+ padding: 2rem;
+
+ font-weight: 600;
+
+ font-size: 1.2rem;
+
+}
+
+
+
+.add-room-success-footer {
+
+ border-top: none;
+
+ padding: 0 2rem 2rem;
+
+}
+
+
+
+.add-room-success-button {
+
+ background: #73c991;
+
+ color: #06202B;
+
+ border: none;
+
+ padding: 0.5rem 1.5rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+}
+
+
+
+.add-room-success-button:hover {
+
+ background: #62c8b3;
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .add-room-container {
+
+  padding: 1rem;
+
+  margin: 1rem;
+
+ }
+
+  
+
+ .add-room-title {
+
+  font-size: 1.8rem;
+
+ }
+
+  
+
+ .add-room-card-body {
+
+  padding: 1.5rem;
+
+ }
+
+  
+
+ .add-room-input, 
+
+ .add-room-textarea,
+
+ .add-room-file-input {
+
+  padding: 0.7rem;
+
+ }
+
+}

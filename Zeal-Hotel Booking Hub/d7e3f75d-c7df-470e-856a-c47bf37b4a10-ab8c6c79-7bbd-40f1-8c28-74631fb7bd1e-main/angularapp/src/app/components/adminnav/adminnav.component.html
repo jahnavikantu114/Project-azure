@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background: black;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#" style="color: white;">Hotel Booking Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li *ngIf="userRole === 'Admin'" class="nav-item navbar-user">
+                    <div style="color: white;">
+                        Hello, {{userName}}
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" routerLink="/mainpage">Home</a>
+                </li>
+                <li *ngIf="userRole === 'Admin'" class="nav-item">
+                    <select class="form-select" aria-label="Room options" (change)="onRoomOptionChange($event)" style="background: none; text-align: center; color: white; border: none;">
+                        <option value="Room" selected disabled>Room</option>
+                        <option value="post" style="color: black;">Add Room</option>
+                        <option value="view" style="color: black;">View Room</option>
+                    </select>
+                </li>
+                <li *ngIf="userRole === 'Admin'" class="nav-item">
+                    <a class="nav-link" style="color: white;" routerLink="/adminviewrequestedbooking">Booking Requested</a>
+                </li>
+                <li *ngIf="userRole === 'Admin'" class="nav-item">
+                    <a class="nav-link" style="color: white;" routerLink="/adminviewfeedback">Feedbacks</a>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" style="color: white;" routerLink="/logout">Logout</a> -->
+                    <button class="logout-btn"  (click)="logout()">Logout</button>
+                  </li>
+            </ul>`
+        </div>
+    </div>
+</nav>
+ 

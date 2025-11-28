@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+ 
+ 
+ 
+.feedback-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ display: flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+ min-height: 100vh;
+
+ background-color: #F5EEDD;
+
+ padding: 2rem;
+
+}
+
+
+
+.feedback-card {
+
+ background: white;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+ padding: 2.5rem;
+
+ width: 100%;
+
+ max-width: 600px;
+
+}
+
+
+
+.feedback-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #077A7D;
+
+ text-align: center;
+
+ margin-bottom: 1.5rem;
+
+ letter-spacing: 1px;
+
+}
+
+
+
+.title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #7AE2CF;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.feedback-form {
+
+ margin-top: 1.5rem;
+
+}
+
+
+
+.form-group {
+
+ margin-bottom: 1.8rem;
+
+}
+
+
+
+.feedback-label {
+
+ display: block;
+
+ font-size: 0.9rem;
+
+ font-weight: 600;
+
+ color: #06202B;
+
+ margin-bottom: 0.5rem;
+
+ text-transform: uppercase;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.required-asterisk {
+
+ color: #e74c3c;
+
+ margin-left: 0.2rem;
+
+}
+
+
+
+.feedback-input {
+
+ width: 100%;
+
+ padding: 1rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.2);
+
+ border-radius: 6px;
+
+ font-family: 'Montserrat', sans-serif;
+
+ min-height: 150px;
+
+ resize: vertical;
+
+ transition: all 0.3s ease;
+
+}
+
+
+
+.feedback-input:focus {
+
+ outline: none;
+
+ border-color: #7AE2CF;
+
+ box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+
+}
+
+
+
+.error-message {
+
+ color: #e74c3c;
+
+ font-size: 0.8rem;
+
+ margin-top: 0.5rem;
+
+}
+
+
+
+.submit-button {
+
+ width: 100%;
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 1rem;
+
+ font-size: 1rem;
+
+ font-weight: 600;
+
+ text-transform: uppercase;
+
+ letter-spacing: 1px;
+
+ border-radius: 6px;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+}
+
+
+
+.submit-button:hover:not([disabled]) {
+
+ background: #06202B;
+
+ transform: translateY(-2px);
+
+ box-shadow: 0 5px 15px rgba(7, 122, 125, 0.3);
+
+}
+
+
+
+.submit-button:disabled {
+
+ background: #cccccc;
+
+ cursor: not-allowed;
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .feedback-container {
+
+  padding: 1.5rem;
+
+ }
+
+  
+
+ .feedback-card {
+
+  padding: 1.5rem;
+
+ }
+
+  
+
+ .feedback-title {
+
+  font-size: 1.8rem;
+
+ }
+
+}

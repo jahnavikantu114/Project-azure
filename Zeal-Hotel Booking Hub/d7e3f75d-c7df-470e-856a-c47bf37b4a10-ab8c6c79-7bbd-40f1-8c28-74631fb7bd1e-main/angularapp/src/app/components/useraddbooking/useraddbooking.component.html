@@ -1,0 +1,135 @@
+<div class="container mt-5 booking-container">
+
+  <div class="row justify-content-center">
+ 
+   <div class="col-md-6">
+ 
+    <div class="card booking-card">
+ 
+     <div class="card-body booking-card-body">
+ 
+      <button type="button" class="btn booking-back-button" (click)="backBooking()">Back</button>
+ 
+      <h3 class="text-center mb-4 mt-4 booking-title">BOOKING  REQUEST FORM </h3>
+ 
+      <div class="booking-title-divider"></div>
+ 
+      <form (ngSubmit)="addBooking(); bookingForm.form.markAllAsTouched();" #bookingForm="ngForm" class="booking-form">
+ 
+       <div class="form-group mb-3 booking-form-group">
+ 
+        <label for="checkInDate" class="booking-label">CHECK-IN DATE<span class="text-danger">*</span></label>
+ 
+        <input type="date" id="checkInDate" [(ngModel)]="booking.CheckInDate" name="checkInDate" #checkInDateNg="ngModel" required class="form-control booking-input" placeholder="Enter check-in date" (change)="validateDates()" [min]="minDate">
+ 
+        <div *ngIf="checkInDateNg.invalid && (checkInDateNg.touched || bookingForm.submitted)" class="booking-error">
+ 
+         Check-In Date is required.
+ 
+        </div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 booking-form-group">
+ 
+        <label for="checkOutDate" class="booking-label">CHECK-OUT DATE<span class="text-danger">*</span></label>
+ 
+        <input type="date" id="checkOutDate" [(ngModel)]="booking.CheckOutDate" name="checkOutDate" #checkOutDateNg="ngModel" required class="form-control booking-input" placeholder="Enter check-out date" (change)="validateDates()" [min]="booking.CheckInDate" [min]="minDate">
+ 
+        <div *ngIf="checkOutDateNg.invalid && (checkOutDateNg.touched || bookingForm.submitted)" class="booking-error">
+ 
+         Check-Out Date is required.
+ 
+        </div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 booking-form-group">
+ 
+        <label for="specialRequests" class="booking-label">SPECIAL REQUESTS<span class="text-danger">*</span></label>
+ 
+        <textarea id="specialRequests" [(ngModel)]="booking.SpecialRequests" name="specialRequests" #specialRequestsNg="ngModel" required class="form-control booking-textarea" placeholder="Enter any special requests"></textarea>
+ 
+        <div *ngIf="specialRequestsNg.invalid && (specialRequestsNg.touched || bookingForm.submitted)" class="booking-error">
+ 
+         Special Requests are required.
+ 
+        </div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 booking-form-group">
+ 
+        <label for="bookingPurpose" class="booking-label">BOOKING PURPOSE<span class="text-danger">*</span></label>
+ 
+        <input type="text" id="bookingPurpose" [(ngModel)]="booking.BookingPurpose" name="bookingPurpose" #bookingPurposeNg="ngModel" required class="form-control booking-input" placeholder="Enter the purpose of booking">
+ 
+        <div *ngIf="bookingPurposeNg.invalid && (bookingPurposeNg.touched || bookingForm.submitted)" class="booking-error">
+ 
+         Booking Purpose is required.
+ 
+        </div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 booking-form-group">
+ 
+        <label for="additionalComments" class="booking-label">ADDITIONAL COMMENTS<span class="text-danger">*</span></label>
+ 
+        <textarea id="additionalComments" [(ngModel)]="booking.AdditionalComments" name="additionalComments" #additionalCommentsNg="ngModel" required class="form-control booking-textarea" placeholder="Enter any additional comments"></textarea>
+ 
+        <div *ngIf="additionalCommentsNg.invalid && (additionalCommentsNg.touched || bookingForm.submitted)" class="booking-error">
+ 
+         Additional Comments are required.
+ 
+        </div>
+ 
+        <div *ngIf="errorMessage" class="booking-error-message">
+ 
+         {{ errorMessage }}
+ 
+        </div>
+ 
+       </div>
+ 
+       <button type="submit" class="btn booking-submit-button">Submit</button>
+ 
+      </form>
+ 
+     </div>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>
+ 
+ 
+ 
+ <!-- Success Modal -->
+ 
+ <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+ 
+  <div class="modal-dialog modal-dialog-centered modal-sm booking-success-modal">
+ 
+   <div class="modal-content booking-success-content">
+ 
+    <div class="modal-body booking-success-body text-center">
+ 
+     Successfully Submitted
+ 
+    </div>
+    <div class="modal-footer add-room-success-footer justify-content-center">
+ 
+      <button type="button" class="add-room-success-button" (click)="closeModal()">OK</button>
+  
+     </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>
+ 

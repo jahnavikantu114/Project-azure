@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+   
+   
+   
+.booking-approval-container {
+
+ font-family: 'Montserrat', sans-serif;
+
+ max-width: 1200px;
+
+ margin: 2rem auto;
+
+ padding: 2rem;
+
+ background-color: #F5EEDD;
+
+ border-radius: 10px;
+
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.booking-approval-title {
+
+ font-family: 'Playfair Display', serif;
+
+ font-weight: 700;
+
+ font-size: 2.2rem;
+
+ color: #077A7D;
+
+ text-align: center;
+
+ margin-bottom: 0.5rem;
+
+ letter-spacing: 1px;
+
+}
+
+
+
+.booking-approval-title-divider {
+
+ width: 80px;
+
+ height: 2px;
+
+ background: #7AE2CF;
+
+ margin: 0 auto 2rem;
+
+}
+
+
+
+.booking-approval-filters {
+
+ display: flex;
+
+ justify-content: space-between;
+
+ align-items: center;
+
+ margin-bottom: 2rem;
+
+ flex-wrap: wrap;
+
+ gap: 1rem;
+
+}
+
+
+
+.booking-approval-search {
+
+ padding: 0.8rem 1.2rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.2);
+
+ border-radius: 30px;
+
+ font-size: 1rem;
+
+ width: 300px;
+
+ max-width: 100%;
+
+ transition: all 0.3s ease;
+
+ background-color: white;
+
+}
+
+
+
+.booking-approval-search:focus {
+
+ outline: none;
+
+ border-color: #7AE2CF;
+
+ box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+
+}
+
+
+
+.booking-approval-filter-group {
+
+ display: flex;
+
+ align-items: center;
+
+ gap: 0.5rem;
+
+}
+
+
+
+.booking-approval-filter-label {
+
+ font-weight: 600;
+
+ color: #06202B;
+
+ font-size: 0.9rem;
+
+}
+
+
+
+.booking-approval-filter-select {
+
+ padding: 0.5rem 1rem;
+
+ border: 1px solid rgba(6, 32, 43, 0.2);
+
+ border-radius: 4px;
+
+ font-size: 0.9rem;
+
+ background-color: white;
+
+ cursor: pointer;
+
+}
+
+
+
+.booking-approval-filter-select:focus {
+
+ outline: none;
+
+ border-color: #7AE2CF;
+
+}
+
+
+
+.booking-approval-table-container {
+
+ overflow-x: auto;
+
+ background: white;
+
+ border-radius: 8px;
+
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+.booking-approval-table {
+
+ width: 100%;
+
+ border-collapse: collapse;
+
+}
+
+
+
+.booking-approval-table thead {
+
+ background-color: #077A7D;
+
+ color: white;
+
+}
+
+
+
+.booking-approval-table th {
+
+ padding: 1rem;
+
+ text-align: left;
+
+ font-weight: 600;
+
+ text-transform: uppercase;
+
+ font-size: 0.85rem;
+
+ letter-spacing: 0.5px;
+
+}
+
+
+
+.booking-approval-table td {
+
+ padding: 1rem;
+
+ border-bottom: 1px solid rgba(6, 32, 43, 0.1);
+
+ color: #06202B;
+
+}
+
+
+
+.booking-approval-table tr:last-child td {
+
+ border-bottom: none;
+
+}
+
+
+
+.booking-approval-table tr:hover {
+
+ background-color: rgba(122, 226, 207, 0.05);
+
+}
+
+
+
+.booking-approval-status {
+
+ padding: 0.3rem 0.8rem;
+
+ border-radius: 20px;
+
+ font-size: 0.8rem;
+
+ font-weight: 600;
+
+ display: inline-block;
+
+}
+
+
+
+.booking-approval-status.approved {
+
+ background-color: #d4edda;
+
+ color: #155724;
+
+}
+
+
+
+.booking-approval-status.rejected {
+
+ background-color: #f8d7da;
+
+ color: #721c24;
+
+}
+
+
+
+.booking-approval-status.pending {
+
+ background-color: #fff3cd;
+
+ color: #856404;
+
+}
+
+
+
+.booking-approval-actions {
+
+ display: flex;
+
+ gap: 0.5rem;
+
+}
+
+
+
+.booking-approval-approve {
+
+ background: #077A7D;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.5rem 1rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ font-size: 0.85rem;
+
+}
+
+
+
+.booking-approval-approve:hover {
+
+ background: #06202B;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+.booking-approval-reject {
+
+ background: #e74c3c;
+
+ color: white;
+
+ border: none;
+
+ padding: 0.5rem 1rem;
+
+ border-radius: 4px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ font-size: 0.85rem;
+
+}
+
+
+
+.booking-approval-reject:hover {
+
+ background: #c0392b;
+
+ transform: translateY(-1px);
+
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+ .booking-approval-container {
+
+  padding: 1rem;
+
+  margin: 1rem;
+
+ }
+
+  
+
+ .booking-approval-title {
+
+  font-size: 1.8rem;
+
+ }
+
+  
+
+ .booking-approval-filters {
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+ }
+
+  
+
+ .booking-approval-search {
+
+  width: 100%;
+
+ }
+
+  
+
+ .booking-approval-filter-group {
+
+  justify-content: space-between;
+
+ }
+
+  
+
+ .booking-approval-table th,
+
+ .booking-approval-table td {
+
+  padding: 0.8rem;
+
+  font-size: 0.85rem;
+
+ }
+
+  
+
+ .booking-approval-actions {
+
+  flex-direction: column;
+
+  gap: 0.3rem;
+
+ }
+
+  
+
+ .booking-approval-approve,
+
+ .booking-approval-reject {
+
+  width: 100%;
+
+  padding: 0.5rem;
+
+ }
+
+}

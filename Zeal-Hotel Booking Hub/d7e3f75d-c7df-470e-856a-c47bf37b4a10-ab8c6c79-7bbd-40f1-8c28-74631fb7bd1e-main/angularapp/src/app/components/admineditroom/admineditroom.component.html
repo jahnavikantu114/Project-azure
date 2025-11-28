@@ -1,0 +1,177 @@
+<div class="container mt-5 edit-room-container">
+
+  <div class="row justify-content-center">
+ 
+   <div class="col-md-6">
+ 
+    <div class="card edit-room-card">
+ 
+     <div class="card-body edit-room-card-body">
+ 
+      <h1 class="text-center mb-4 edit-room-title">Edit Room Details
+ 
+       <button type="button" (click)="back()" class="edit-room-back-button">Back</button>
+ 
+      </h1>
+ 
+      <div class="edit-room-title-divider"></div>
+ 
+      <form (ngSubmit)="EditRoom()" #roomForm="ngForm" novalidate class="edit-room-form">
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="hotelName" class="edit-room-label">HOTEL NAME<span class="text-danger">*</span></label>
+ 
+        <input type="text" id="hotelName" [(ngModel)]="room.HotelName" name="hotelName" required #hotelNameNg="ngModel" minlength="3" class="form-control edit-room-input">
+ 
+        <div *ngIf="hotelNameNg.invalid && (hotelNameNg.dirty || hotelNameNg.touched)" class="edit-room-error">Hotel Name is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="roomType" class="edit-room-label">ROOM TYPE<span class="text-danger">*</span></label>
+ 
+        <select id="roomType" [(ngModel)]="room.RoomType" name="roomType" required #roomTypeNg="ngModel" class="form-control edit-room-input">
+ 
+         <option value="" disabled selected>{{room.RoomType}}</option>
+ 
+         <option value="Suite">Suite</option>
+ 
+         <option value="Premium">Premium</option>
+ 
+         <option value="Deluxe">Deluxe</option>
+ 
+         <option value="Executive">Executive</option>
+ 
+        </select>
+ 
+        <div *ngIf="roomTypeNg.invalid && (roomTypeNg.dirty || roomTypeNg.touched)" class="edit-room-error">Room Type is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="noOfRooms" class="edit-room-label">NUMBER OF ROOMS<span class="text-danger">*</span></label>
+ 
+        <input type="number" id="noOfRooms" [(ngModel)]="room.NoOfRooms" name="noOfRooms" required #noOfRoomsNg="ngModel" min="1" class="form-control edit-room-input">
+ 
+        <div *ngIf="noOfRoomsNg.invalid && (noOfRoomsNg.dirty || noOfRoomsNg.touched)" class="edit-room-error">Number of Rooms is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="pricePerNight" class="edit-room-label">PRICE PER NIGHT<span class="text-danger">*</span></label>
+ 
+        <input type="number" id="pricePerNight" [(ngModel)]="room.PricePerNight" name="pricePerNight" required #pricePerNightNg="ngModel" min="1" class="form-control edit-room-input">
+ 
+        <div *ngIf="pricePerNightNg.invalid && (pricePerNightNg.dirty || pricePerNightNg.touched)" class="edit-room-error">Price Per Night is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="location" class="edit-room-label">LOCATION<span class="text-danger">*</span></label>
+ 
+        <input type="text" id="location" [(ngModel)]="room.Location" name="location" required #locationNg="ngModel" minlength="3" class="form-control edit-room-input">
+ 
+        <div *ngIf="locationNg.invalid && (locationNg.dirty || locationNg.touched)" class="edit-room-error">Location is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="bedType" class="edit-room-label">BED TYPE<span class="text-danger">*</span></label>
+ 
+        <select id="bedType" [(ngModel)]="room.BedType" name="bedType" required #bedTypeNg="ngModel" class="form-control edit-room-input" >
+ 
+          <option value="" disabled selected>{{room.BedType}}</option>
+  
+          <option value="Single">Single</option>
+  
+          <option value="Deluxe">Double</option>
+  
+          <option value="Triple">Triple</option>
+  
+         </select>
+ 
+        <div *ngIf="bedTypeNg.invalid && (bedTypeNg.dirty || bedTypeNg.touched)" class="edit-room-error">Bed Type is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="isAvailable" class="edit-room-label">IS AVAILABLE<span class="text-danger">*</span></label>
+ 
+        <select name="isAvailable" id="isAvailable" [(ngModel)]="room.IsAvailable" required #isAvailableNg="ngModel" class="form-control edit-room-select">
+ 
+         <option [ngValue]="false">No</option>
+ 
+         <option [ngValue]="true">Yes</option>
+ 
+        </select>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="description" class="edit-room-label">DESCRIPTION<span class="text-danger">*</span></label>
+ 
+        <textarea id="description" [(ngModel)]="room.Description" name="description" required #descriptionNg="ngModel" minlength="2" class="form-control edit-room-textarea"></textarea>
+ 
+        <div *ngIf="descriptionNg.invalid && (descriptionNg.dirty || descriptionNg.touched)" class="edit-room-error">Description is required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="facilities" class="edit-room-label">FACILITIES<span class="text-danger">*</span></label>
+ 
+        <textarea id="facilities" [(ngModel)]="room.Facilities" name="facilities" required #facilitiesNg="ngModel" minlength="2" class="form-control edit-room-textarea"></textarea>
+ 
+        <div *ngIf="facilitiesNg.invalid && (facilitiesNg.dirty || facilitiesNg.touched)" class="edit-room-error">Facilities are required.</div>
+ 
+       </div>
+ 
+       <div class="form-group mb-3 edit-room-form-group">
+ 
+        <label for="image" class="edit-room-label">UPLOAD IMAGE<span class="text-danger">*</span></label>
+ 
+        <input type="file" id="image" (change)="onFileSelected($event)" #fileInput class="form-control edit-room-file-input">
+ 
+       </div>
+ 
+       <div *ngIf="errorMessage" class="edit-room-error-message">
+ 
+        {{ errorMessage }}
+ 
+       </div>
+ 
+       <button type="submit" class="edit-room-submit-button">Update Room</button>
+ 
+       <div *ngIf="showMessage" class="edit-room-success-popup">
+ 
+        <div class="edit-room-popup-content">
+ 
+         <p>Room details updated successfully!</p>
+ 
+         <button type="button" (click)="ok()" class="edit-room-popup-button">Ok</button>
+ 
+        </div>
+ 
+       </div>
+ 
+      </form>
+ 
+     </div>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+ </div>
+ 
+ 

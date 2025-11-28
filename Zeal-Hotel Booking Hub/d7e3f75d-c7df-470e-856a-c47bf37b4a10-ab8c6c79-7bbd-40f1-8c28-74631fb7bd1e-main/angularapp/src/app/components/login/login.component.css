@@ -1,0 +1,377 @@
+/* Base Styles */
+   
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600&display=swap');
+   
+   
+   
+.login-container {
+ 
+ font-family: 'Montserrat', sans-serif;
+ 
+ display: flex;
+ 
+ height: 100vh;
+ 
+ color: #06202B;
+ 
+}
+ 
+ 
+ 
+/* Welcome Panel */
+ 
+.welcome-panel {
+ 
+ flex: 1;
+ 
+ background: linear-gradient(135deg, #077A7D 0%, #06202B 100%);
+ 
+ color: white;
+ 
+ padding: 2rem;
+ 
+ display: flex;
+ 
+ align-items: center;
+ 
+ justify-content: center;
+ 
+}
+ 
+ 
+ 
+.welcome-content {
+ 
+ max-width: 500px;
+ 
+ text-align: center;
+ 
+}
+ 
+ 
+ 
+.welcome-content h1 {
+ 
+ font-family: 'Montserrat', sans-serif;
+ 
+ font-weight: 300;
+ 
+ font-size: 1.8rem;
+ 
+ letter-spacing: 3px;
+ 
+ margin-bottom: 1rem;
+ 
+}
+ 
+ 
+ 
+.hotel-title {
+ 
+ font-family: 'Playfair Display', serif;
+ 
+ font-weight: 700;
+ 
+ font-size: 3.5rem;
+ 
+ letter-spacing: 5px;
+ 
+ text-transform: uppercase;
+ 
+ margin-bottom: 1.5rem;
+ 
+}
+ 
+ 
+ 
+.title-line {
+ 
+ width: 100px;
+ 
+ height: 2px;
+ 
+ background: #7AE2CF;
+ 
+ margin: 0 auto 2rem;
+ 
+}
+ 
+ 
+ 
+.welcome-content p {
+ 
+ font-size: 1.1rem;
+ 
+ line-height: 1.6;
+ 
+ opacity: 0.9;
+ 
+}
+ 
+ 
+ 
+/* Form Panel */
+ 
+.form-panel {
+ 
+ flex: 1;
+ 
+ background: black;
+ 
+ display: flex;
+ 
+ flex-direction: column;
+ 
+ align-items: center;
+ 
+ justify-content: center;
+ 
+ padding: 2rem;
+ 
+}
+ 
+ 
+ 
+.form-panel h2 {
+ 
+ font-family: 'Playfair Display', serif;
+ 
+ font-weight: 700;
+ 
+ font-size: 2.5rem;
+ 
+ letter-spacing: 3px;
+ 
+ text-transform: uppercase;
+ 
+ color: #F5EEDD;
+ 
+ margin-bottom: 2rem;
+ 
+}
+ 
+ 
+ 
+.login-form {
+ 
+ width: 100%;
+ 
+ max-width: 400px;
+ 
+}
+ 
+ 
+ 
+.form-group {
+ 
+ margin-bottom: 1.5rem;
+ 
+}
+ 
+ 
+ 
+.form-group label {
+ 
+ display: block;
+ 
+ font-size: 0.8rem;
+ 
+ font-weight: 600;
+ 
+ text-transform: uppercase;
+ 
+ letter-spacing: 1px;
+ 
+ margin-bottom: 0.5rem;
+ 
+ color: #F5EEDD;
+ 
+}
+ 
+ 
+ 
+.form-input {
+ 
+ width: 100%;
+ 
+ padding: 0.8rem 1rem;
+ 
+ border: 1px solid rgba(6, 32, 43, 0.1);
+ 
+ border-radius: 6px;
+ 
+ font-family: inherit;
+ 
+ background: white;
+ 
+ transition: all 0.3s ease;
+ 
+}
+ 
+ 
+ 
+.form-input:focus {
+ 
+ outline: none;
+ 
+ border-color: #7AE2CF;
+ 
+ box-shadow: 0 0 0 3px rgba(122, 226, 207, 0.2);
+ 
+}
+ 
+ 
+ 
+.error {
+ 
+ color: #e74c3c;
+ 
+ font-size: 0.8rem;
+ 
+ margin-top: 0.5rem;
+ 
+}
+ 
+ 
+ 
+.login-button {
+ 
+ width: 100%;
+ 
+ background: #077A7D;
+ 
+ color: white;
+ 
+ border: none;
+ 
+ padding: 1rem;
+ 
+ font-size: 1rem;
+ 
+ font-weight: 600;
+ 
+ text-transform: uppercase;
+ 
+ letter-spacing: 1px;
+ 
+ border-radius: 6px;
+ 
+ cursor: pointer;
+ 
+ transition: all 0.3s ease;
+ 
+ margin-top: 1rem;
+ 
+}
+ 
+ 
+ 
+.login-button:hover {
+ 
+ background: #06202B;
+ 
+ transform: translateY(-2px);
+ 
+ box-shadow: 0 5px 15px rgba(7, 122, 125, 0.3);
+ 
+}
+ 
+ 
+ 
+.login-button:disabled {
+ 
+ background: #cccccc;
+ 
+ cursor: not-allowed;
+ 
+ transform: none;
+ 
+ box-shadow: none;
+ 
+}
+ 
+ 
+ 
+.register-text {
+ 
+ text-align: center;
+ 
+ margin-top: 2rem;
+ 
+ color: #F5EEDD;
+ 
+}
+ 
+ 
+ 
+.register-link {
+ 
+ color: #077A7D;
+ 
+ text-decoration: none;
+ 
+ font-weight: 600;
+ 
+ cursor: pointer;
+ 
+ transition: all 0.3s ease;
+ 
+}
+ 
+ 
+ 
+.register-link:hover {
+ 
+ color: #06202B;
+ 
+ text-decoration: underline;
+ 
+}
+ 
+ 
+ 
+/* Responsive Design */
+ 
+@media (max-width: 768px) {
+ 
+ .login-container {
+ 
+  flex-direction: column;
+ 
+ }
+ 
+ 
+ 
+ .welcome-panel {
+ 
+  padding: 3rem 2rem;
+ 
+ }
+ 
+ 
+ 
+ .form-panel {
+ 
+  padding: 3rem 2rem;
+ 
+ }
+ 
+ 
+ 
+ .hotel-title {
+ 
+  font-size: 2.5rem;
+ 
+ }
+ 
+ 
+ 
+ .form-panel h2 {
+ 
+  font-size: 2rem;
+ 
+ }
+ 
+}
+ 
+ 

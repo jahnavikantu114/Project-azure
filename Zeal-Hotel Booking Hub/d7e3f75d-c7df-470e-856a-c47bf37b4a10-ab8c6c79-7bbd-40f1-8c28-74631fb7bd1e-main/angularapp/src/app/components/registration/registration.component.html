@@ -1,0 +1,344 @@
+<div class="auth-container">
+
+   <!-- Luxury Background Panel -->
+  
+   <div class="luxury-panel">
+  
+    <div class="luxury-overlay">
+  
+     <div class="luxury-content">
+  
+      <h1>JOIN OUR</h1>
+  
+      <div class="brand-title">HOTEL BOOKING HUB</div>
+  
+      <div class="divider-line"></div>
+  
+      <p class="luxury-text">Create your account to unlock exclusive benefits and personalized travel experiences</p>
+  
+      <div class="luxury-features">
+  
+       <div class="feature-item">
+  
+        <span class="feature-icon">✧</span>
+  
+        <span>Best Price Guarantee</span>
+  
+       </div>
+  
+       <div class="feature-item">
+  
+        <span class="feature-icon">✧</span>
+  
+        <span>24/7 Customer Support</span>
+  
+       </div>
+  
+       <div class="feature-item">
+  
+        <span class="feature-icon">✧</span>
+  
+        <span>Exclusive Member Deals</span>
+  
+       </div>
+  
+      </div>
+  
+     </div>
+  
+    </div>
+  
+   </div>
+  
+  
+  
+   <!-- Your Original Registration Form (Completely Unchanged Functionality) -->
+  
+   <div class="registration-form-container">
+  
+    <h2 class="form-title">CREATE ACCOUNT</h2>
+  
+     
+  
+    <form (ngSubmit)="register()" #registerForm="ngForm" class="elegant-form">
+  
+     <!-- Username field -->
+  
+     <div class="form-field">
+  
+      <label for="username" class="input-label">USERNAME*</label>
+  
+      <input
+  
+       type="text"
+  
+       id="username"
+  
+       [(ngModel)]="user.Username"
+  
+       name="username"
+  
+       placeholder="Enter your username"
+  
+       required
+  
+       #usernameField="ngModel"
+  
+       class="elegant-input"
+  
+      >
+  
+      <div class="error-message" *ngIf="(registerForm.submitted && usernameField.invalid) || (usernameField.invalid && (usernameField.dirty || usernameField.touched))">
+  
+       Username is required.
+  
+      </div>
+  
+     </div>
+  
+     
+  
+     <!-- Email field -->
+  
+     <div class="form-field">
+  
+      <label for="email" class="input-label">EMAIL*</label>
+  
+      <input
+  
+       type="email"
+  
+       id="email"
+  
+       [(ngModel)]="user.Email"
+  
+       name="email"
+  
+       placeholder="Enter your email"
+  
+       required
+
+       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+  
+       #emailField="ngModel"
+  
+       class="elegant-input"
+  
+      >
+  
+      <div *ngIf="(registerForm.submitted && emailField.invalid) || (emailField.invalid && (emailField.dirty || emailField.touched))">
+        <div class="error-message" *ngIf="emailField.errors?.required">
+        Email is required.
+        </div> 
+       <div class="error-message" *ngIf="emailField.errors?.pattern">Invalid Email ID.</div>
+      </div>
+     </div>
+  
+  
+     
+  
+     <!-- Password field -->
+  
+     <div class="form-field">
+  
+      <label for="password" class="input-label">PASSWORD*</label>
+  
+      <input
+  
+       type="password"
+  
+       id="password"
+  
+       [(ngModel)]="user.Password"
+  
+       name="password"
+  
+       placeholder="Enter your password"
+  
+       required
+
+       pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}"
+  
+       #passwordField="ngModel"
+  
+       class="elegant-input"
+  
+      >
+  
+      <div *ngIf="(registerForm.submitted && passwordField.invalid) || (passwordField.invalid && (passwordField.dirty || passwordField.touched))">
+       <div class="error-message" *ngIf="passwordField.errors?.required">
+       Password is required
+       </div> 
+      <div class="error-message" *ngIf="passwordField.errors?.pattern">Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character</div>
+     </div>
+  </div>
+     
+  
+     <!-- Confirm password field -->
+  
+     <div class="form-field">
+  
+      <label for="confirm-password" class="input-label">CONFIRM PASSWORD*</label>
+  
+      <input
+  
+       type="password"
+  
+       id="confirm-password"
+  
+       [(ngModel)]="confirmPassword"
+  
+       name="confirmPassword"
+  
+       placeholder="Confirm your password"
+  
+       required
+  
+       #confirmPasswordField="ngModel"
+  
+       class="elegant-input"
+  
+      >
+  
+      <div class="error-message" *ngIf="(registerForm.submitted && confirmPasswordField.invalid) || (confirmPasswordField.invalid && (confirmPasswordField.dirty || confirmPasswordField.touched))">
+  
+       Confirm Password is required.
+  
+      </div>
+  
+      <div class="error-message" *ngIf="user.Password!=confirmPassword && (confirmPasswordField.dirty || confirmPasswordField.touched)">
+  
+       Passwords do not match
+  
+      </div>
+  
+     </div>
+  
+     
+  
+     <!-- Mobile number field -->
+  
+     <div class="form-field">
+  
+      <label for="mobile" class="input-label">MOBILE NUMBER*</label>
+  
+      <input
+  
+       type="tel"
+  
+       id="mobile"
+  
+       [(ngModel)]="user.MobileNumber"
+  
+       name="mobile"
+  
+       placeholder="Enter your mobile number"
+  
+       required
+
+       pattern="^[6-9]\d{9}$"
+  
+       #mobileField="ngModel"
+  
+       class="elegant-input"
+  
+      >
+  
+      <div class="error-message" *ngIf="(registerForm.submitted && mobileField.invalid) || (mobileField.invalid && (mobileField.dirty || mobileField.touched))">
+       <div *ngIf="mobileField.errors?.required">
+       Mobile Number is required.
+       </div>
+       <div *ngIf="mobileField.errors?.pattern">
+       Invalid mobile number
+       </div>
+      </div>
+  
+     </div>
+  
+     
+  
+     <!-- Role dropdown field -->
+  
+     <div class="form-field">
+  
+      <label for="role" class="input-label">ROLE*</label>
+  
+      <select
+  
+       id="role"
+  
+       [(ngModel)]="user.UserRole"
+  
+       name="role"
+  
+       required
+  
+       #roleField="ngModel"
+  
+       class="elegant-select"
+  
+      >
+  
+       <option value="" disabled selected>Select a role</option>
+  
+       <option value="User">User</option>
+  
+       <option value="Admin">Admin</option>
+  
+      </select>
+  
+      <div class="error-message" *ngIf="(registerForm.submitted && roleField.invalid) || (roleField.invalid && (roleField.dirty || roleField.touched))">
+  
+       Role selection is required.
+  
+      </div>
+  
+     </div>
+  
+  
+  
+     <!-- Secret Key Field (Conditional) -->
+  
+     <div class="form-field" *ngIf="user.UserRole === 'Admin'">
+  
+      <label for="secretKey" class="input-label">SECRET KEY* <span class="required-asterisk">*</span></label>
+  
+      <input 
+  
+       type="password" 
+  
+       id="secretKey" 
+  
+       name="secretKey" 
+  
+       [(ngModel)]="enteredkey" 
+  
+       required 
+  
+       #secretKeyNg="ngModel" 
+  
+       class="elegant-input"
+  
+       placeholder="Enter admin secret key"
+  
+      >
+  
+      <div class="error-message" *ngIf="secretKeyNg.invalid && (secretKeyNg.dirty || secretKeyNg.touched)">
+  
+       Secret Key is required
+  
+      </div>
+  
+     </div>
+  
+     
+  
+     <!-- Submit button -->
+  
+     <button type="submit" class="register-button">COMPLETE REGISTRATION</button>
+  
+    </form>
+  
+   </div>
+  
+  </div>
